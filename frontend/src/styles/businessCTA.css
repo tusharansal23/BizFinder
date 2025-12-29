@@ -1,0 +1,57 @@
+.cta-section {
+  width: 100%;
+  padding: 100px 10%;
+  background: linear-gradient(135deg, #0f172a, #2563eb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-content h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.cta-content p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+.cta-content button {
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  background: #ff7f50;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.4s ease forwards;
+  opacity: 0;
+}
+
+.cta-content button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 127, 80, 0.6);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,78 @@
+.app-download {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #2563eb, #0f172a);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-download h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.app-download p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #cbd5e1;
+  animation: fadeInDown 1.2s ease forwards;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+button.android,
+button.ios {
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+}
+
+button.android {
+  background: #3ddc84; /* Android green */
+}
+
+button.ios {
+  background: #000; /* Black for iOS */
+}
+
+button.android:hover,
+button.ios:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

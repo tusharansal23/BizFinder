@@ -1,0 +1,24 @@
+.business-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  backdrop-filter: blur(14px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.business-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(20, 184, 166, 0.25);
+}
+
+.business-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.business-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}

@@ -1,0 +1,87 @@
+.hero {
+  height: 90vh;
+  background: linear-gradient(
+      rgba(15, 23, 42, 0.7),
+      rgba(15, 23, 42, 0.7)
+    ),
+    url("https://images.unsplash.com/photo-1521791136064-7986c2920216");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center content */
+.hero-content {
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+/* 👇 THIS makes 3 rows */
+.hero-search {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap; /* important for mobile */
+}
+
+/* Bigger height inputs */
+.hero-search input {
+  height: 60px;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  min-width: 220px;
+  max-width: 300px;
+  flex: 1;
+}
+
+/* Search button */
+.hero-search .btn {
+  height: 60px;
+  padding: 0 40px;
+  border: none;
+  background: #06b6d4;
+  color: #0f172a;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.hero-search .btn:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero-search {
+    flex-direction: column;
+  }
+
+  .hero-search input,
+  .hero-search .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,14 @@
+.search-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: white;
+}
