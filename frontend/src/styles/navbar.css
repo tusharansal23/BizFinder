@@ -1,17 +1,136 @@
+/* Base Navbar */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 30px;
   border-bottom: 1px solid var(--border);
+  background: #ededf0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
   color: var(--primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 .nav-links a {
-  margin-left: 18px;
   color: var(--text);
   text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links .btn {
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: #06b6d4;
+  color: #020617;
+  border: none;
+  cursor: pointer;
+}
+
+/* Breadcrumb (HIDDEN by default) */
+.breadcrumb {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.breadcrumb a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.back-btn {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .nav {
+    padding: 14px 18px;
+  }
+
+  /* Hide desktop menu */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show breadcrumb ONLY on mobile */
+  .breadcrumb {
+    display: flex;
+  }
+}
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  background: #dddee2;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-menu a,
+.mobile-menu button {
+  padding: 12px 20px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.mobile-menu button {
+  color: #ef4444;
+}
+
+/* Open State */
+.mobile-menu.open {
+  max-height: 400px;
+  padding: 20px 0;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .breadcrumb {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
