@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://bizfinder-2.onrender.com/api";
 
 export const fetchAPI = async (endpoint, options = {}) => {
   const user = JSON.parse(localStorage.getItem("user"));
