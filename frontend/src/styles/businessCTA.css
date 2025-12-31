@@ -55,3 +55,32 @@
     transform: translateY(0);
   }
 }
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 60px 20px;       /* prevent overflow */
+  }
+
+  .cta-content {
+    max-width: 100%;
+  }
+
+  .cta-content h2 {
+    font-size: 2.1rem;
+    line-height: 1.25;
+  }
+
+  .cta-content p {
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .cta-content button {
+    font-size: 1rem;
+    padding: 14px 28px;
+    width: auto;             /* avoid stretching */
+    max-width: 100%;
+  }
+}
