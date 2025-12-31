@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchAPI } from "../services/api";
+import "../styles/login.css";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -29,10 +31,11 @@ const Login = () => {
 
   return (
     <form onSubmit={submitHandler}>
-      <input value={email} onChange={(e) => setEmail(e.target.value)} />
+      <input value={email} placeholder="E-mail" onChange={(e) => setEmail(e.target.value)} />
       <input
         type="password"
         value={password}
+        placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
       />
       <button>Login</button>

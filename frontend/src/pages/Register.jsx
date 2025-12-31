@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { fetchAPI } from "../services/api";
+import "../styles/register.css";
+
 
 const Register = () => {
   const [form, setForm] = useState({
