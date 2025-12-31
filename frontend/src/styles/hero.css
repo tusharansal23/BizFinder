@@ -75,13 +75,28 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
+  
   .hero-search {
     flex-direction: column;
+    width: 100%;
   }
 
-  .hero-search input,
-  .hero-search .btn {
+  .hero-search input {
+    flex: none;
+    height: 68px;              /* ⬆ increased height for mobile */
     width: 100%;
     max-width: 100%;
+    box-sizing: border-box;    /* ✅ prevents overflow */
+  }
+
+  .hero-search .btn {
+    height: 64px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
+
